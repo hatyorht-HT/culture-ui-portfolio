@@ -1,0 +1,50 @@
+/* An in-page original-photo viewer; the reading layout stays unchanged. */
+html.photo-preview-open{overflow:hidden;scrollbar-gutter:stable}
+.photo-viewer{position:fixed;inset:0;width:100%;height:100dvh;max-width:none;max-height:none;margin:0;padding:20px 32px;border:0;background:transparent;color:#f4f4ef;overflow:hidden;font:inherit}
+.photo-viewer[open]{display:grid;grid-template-rows:48px minmax(0,1fr) auto;gap:12px}
+.photo-viewer::backdrop{background:rgba(9,11,10,.92)}
+.photo-viewer-top{display:flex;align-items:center;justify-content:space-between;gap:16px;pointer-events:none}
+.photo-viewer-heading{font-size:16px;font-weight:500;letter-spacing:.02em}
+.photo-viewer-actions{display:flex;gap:10px;pointer-events:auto}
+.photo-viewer button,.photo-viewer-download{display:inline-flex;align-items:center;justify-content:center;flex:none;min-width:44px;min-height:44px;padding:0;border:1px solid #ffffff1c;border-radius:50%;background:#ffffff0e;color:inherit;font:inherit;cursor:pointer;touch-action:manipulation}
+.photo-viewer button:hover,.photo-viewer-download:hover{background:#ffffff22}
+.photo-viewer button:focus-visible,.photo-viewer a:focus-visible{outline:2px solid #d6b8a2;outline-offset:4px}
+.photo-viewer button:disabled{opacity:.35;cursor:default}
+.photo-viewer svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.photo-viewer-stage{position:relative;overflow:hidden;min-height:0;touch-action:none;user-select:none}
+.photo-viewer-image{position:absolute;left:50%;top:50%;display:block;width:auto;max-width:none;height:auto;object-fit:contain;border-radius:4px;transform:translate(calc(-50% + var(--pan-x,0px)),calc(-50% + var(--pan-y,0px))) scale(var(--photo-zoom,1));transform-origin:center;cursor:zoom-in;user-select:none;-webkit-user-drag:none}
+.photo-viewer-stage[data-zoomed=true] .photo-viewer-image{cursor:grab}
+.photo-viewer-stage[data-dragging=true] .photo-viewer-image{cursor:grabbing}
+.photo-viewer-image[hidden]{display:none}
+.photo-viewer-message{position:absolute;inset:0;display:grid;place-content:center;text-align:center;gap:12px;font-size:18px;color:#d9dcd5;pointer-events:none}
+.photo-viewer-message[hidden]{display:none}
+.photo-viewer-bottom{display:grid;justify-items:center;gap:12px;padding-bottom:4px;text-align:center}
+.photo-viewer-caption{font-size:16px;line-height:1.6;color:#d3d7cf;max-width:min(900px,100%);overflow-wrap:anywhere}
+.photo-viewer-meta{display:flex;justify-content:center;align-items:center;gap:10px 20px;flex-wrap:wrap;font-size:14px;line-height:1.6;color:#aeb4aa}
+.photo-viewer-meta a{text-decoration:underline;text-underline-offset:4px}
+.photo-viewer-zoom{display:flex;align-items:center;gap:12px;padding:4px 6px;border:1px solid #ffffff16;border-radius:30px;background:#222623}
+.photo-viewer-zoom button{min-height:40px;min-width:40px;border:0;background:#ffffff0b}
+.photo-viewer-percent{font-size:15px;min-width:58px;font-variant-numeric:tabular-nums}
+.photo-viewer-zoom .photo-viewer-fit{border-radius:20px;font-size:14px;padding:0 14px}
+.photo-viewer-hint{font-size:13px;color:#92998e;line-height:1.5}
+@media(max-width:600px){.photo-viewer{padding:12px 10px max(12px,env(safe-area-inset-bottom))}.photo-viewer[open]{gap:8px;grid-template-rows:44px minmax(0,1fr) auto}.photo-viewer-top{padding-inline:4px}.photo-viewer-heading{font-size:14px}.photo-viewer-caption{font-size:15px}.photo-viewer-meta{font-size:13px;gap:4px 12px}.photo-viewer-bottom{gap:8px}.photo-viewer-hint{display:none}.photo-viewer-zoom{gap:6px}.photo-viewer-actions{gap:8px}}
+
+/* Independently rising embers, underneath the cultural objects and text. */
+.drift-field{position:absolute;inset:0;overflow:hidden;pointer-events:none;contain:layout paint}
+.drift-dot{position:absolute;left:var(--dot-x);bottom:-20px;width:var(--ember-width);height:var(--ember-length);border-radius:65% 35% 55% 45%;background:radial-gradient(ellipse at 50% 30%,var(--ember-core) 0%,#dc8040 30%,var(--ember-edge) 65%,#a8431a00 100%);box-shadow:0 0 5px 1px #d86d292b;opacity:0;animation:ember-ascent var(--dot-time) linear var(--dot-delay) infinite;animation-play-state:paused}
+.dark .drift-dot{box-shadow:0 0 7px 1px #e27b383d}
+.drift-dot:nth-child(4n)::after{content:"";position:absolute;top:65%;left:25%;width:50%;height:7px;background:linear-gradient(#d773343d,transparent);border-radius:50%}
+.drift-field[data-active=true] .drift-dot{animation-play-state:running}
+@keyframes ember-ascent{
+  0%{transform:translate3d(0,0,0) rotate(var(--ember-turn)) scale(.5);opacity:0}
+  8%{opacity:var(--dot-opacity)}
+  28%{transform:translate3d(var(--ember-sway-a),calc(var(--ember-rise)*-.28),0) rotate(calc(var(--ember-turn) + 24deg)) scale(1);opacity:var(--dot-opacity)}
+  56%{transform:translate3d(var(--ember-sway-b),calc(var(--ember-rise)*-.56),0) rotate(calc(var(--ember-turn) - 18deg)) scale(.8);opacity:calc(var(--dot-opacity)*.8)}
+  78%{transform:translate3d(var(--ember-sway-a),calc(var(--ember-rise)*-.78),0) rotate(calc(var(--ember-turn) + 35deg)) scale(.55);opacity:calc(var(--dot-opacity)*.4)}
+  100%{transform:translate3d(var(--ember-sway-end),calc(var(--ember-rise)*-1),0) rotate(var(--ember-turn)) scale(.15);opacity:0}
+}
+.particle-toggle{border:0;background:none;color:inherit;padding:0;font:inherit;min-height:44px;text-align:left;cursor:pointer;text-decoration:underline;text-underline-offset:4px}
+.particle-toggle:focus-visible{outline:2px solid var(--oxide);outline-offset:4px}
+.particle-toggle:disabled{cursor:default;text-decoration:none}
+@media(max-width:850px){.drift-dot:nth-child(n+21){display:none}.drift-dot{box-shadow:0 0 4px #d86d2933}}
+@media(prefers-reduced-motion:reduce){.drift-field{display:none}.drift-dot{animation:none!important}}

@@ -1,0 +1,115 @@
+/* Density correction: adjacent image and reading, without reducing type. */
+.final-stage .site-header{min-height:64px}
+.final-stage .context-band{padding-block:12px}
+.final-stage .chapter{padding-block:20px}
+.final-stage .chapter-head{margin-bottom:15px}
+.final-stage .eyebrow{margin-bottom:9px}
+.final-stage .chapter-intro{margin-top:13px;line-height:1.7}
+.final-stage figcaption{padding-top:6px;line-height:1.65}
+.final-stage .building-pair,.final-stage .spatial-pair{gap:24px}
+.final-stage .building-copy>p:not(.eyebrow){line-height:1.7}
+.final-stage .building-copy .fields{margin-top:15px}
+.final-stage .building-copy .fields>div{padding-block:6px}
+.final-stage .building-copy .text-link{margin-top:5px}
+.final-stage .space-reading .chapter-head{margin-bottom:14px}
+.final-stage .space-reading .chapter-intro{margin-top:12px;line-height:1.7}
+.final-stage .space-selectors{margin:14px 0 0;padding-top:12px;gap:8px}
+.final-stage .space-selectors button{min-height:55px}
+.final-stage .space-selectors .magnetic-label{font-size:16px}
+.final-stage .space-copy{margin-top:12px;padding-top:13px;max-width:none}
+.final-stage .space-copy h3{margin-bottom:7px}
+.final-stage .space-copy>p:not(.space-position){line-height:1.7}
+.final-stage .space-copy>p.note{margin-top:8px;line-height:1.7}
+.final-stage .materials-layout,.detail-layout,.final-stage .living-layout,.time-editorial{gap:24px}
+.final-stage .research-index{margin-top:18px}
+.final-stage .wood-label h3{margin-bottom:10px}
+.final-stage .wood-label>p:not(.eyebrow){line-height:1.7}
+.final-stage .object-fields{margin-top:16px}
+.final-stage .object-fields>div{padding-block:8px}
+.final-stage .crop-more{margin-top:12px}
+.final-stage .crop-more>summary{display:block}
+.final-stage .crop-source{margin-top:9px}
+.final-stage .detail-reading>.chapter-intro{line-height:1.7}
+.final-stage .detail-reading>p:last-child{margin-top:13px;line-height:1.7}
+.final-stage .detail-record .fields>div{padding-block:7px}
+.final-stage .observe-entry{margin-top:13px}
+.final-stage .living-copy>p{line-height:1.7}
+.final-stage .living-copy .note{margin-top:12px;line-height:1.7}
+.final-stage .time-fields{gap:14px 24px}
+.final-stage .time-fields article{padding-top:9px}
+.final-stage .time-fields h3{margin-bottom:7px}
+.final-stage .time-fields p:not(.eyebrow){line-height:1.7}
+.final-stage .expanded-footer{padding-block:18px 22px}
+@media(min-width:761px){
+ .final-stage .b-stage{height:560px}
+ .final-stage .b-title{padding-top:64px}
+ .final-stage .b-title h1{line-height:1.25;margin-bottom:24px}
+ .final-stage .b-title .eyebrow{margin-bottom:22px}
+ .final-stage .b-title .text-link{margin-top:17px}
+ .final-stage .building-pair,.final-stage .spatial-pair{grid-template-columns:4.4fr 7.6fr;align-items:start}
+ .final-stage .building-photo .photo-link{aspect-ratio:1.95}
+ .final-stage .building-photo img{object-position:50% 80%}
+ .final-stage .spatial-photo .photo-link,.final-stage .space-pending{aspect-ratio:1.95}
+ .final-stage .crop-primary .crop-window{height:338px}
+ .final-stage .living-photo .photo-link{aspect-ratio:2.55}
+ .final-stage .living-photo img{object-position:50% 100%}
+ .final-stage #archive{grid-template-columns:repeat(4,minmax(0,1fr));gap:17px 24px}
+ .final-stage #archive>.chapter-head{grid-column:1/-1;grid-row:auto;display:flex;justify-content:space-between;align-items:center;gap:40px;margin:0}
+ .final-stage #archive .chapter-intro{margin:0;max-width:490px}
+ .final-stage #archive>.archive-mobile-more{display:contents}
+ .final-stage #archive .archive-record{grid-column:auto;display:flex;flex-direction:column;padding:0;border-top:0;gap:0}
+ .final-stage #archive .archive-thumb{height:104px;aspect-ratio:auto;width:100%;margin:0 0 10px}
+ .final-stage #archive .archive-row{display:flex;flex-direction:column;gap:3px;align-items:start}
+ .final-stage #archive .archive-row h3{order:0}
+ .final-stage #archive .record-meta{order:1;gap:0 10px}
+ .final-stage #archive .archive-row>a{order:2;text-align:left;padding-block:8px}
+ .final-stage #archive .archive-record details summary{padding-top:3px;min-height:30px}
+ .final-stage #archive .more-records{grid-column:1/-1;margin:0}
+ .final-stage #archive .additional-record{display:block}
+}
+@media(min-width:761px) and (max-width:999px){
+ .final-stage .building-pair,.final-stage .spatial-pair{grid-template-columns:4.7fr 7.3fr}
+ .final-stage .spatial-pair{align-items:center}
+ .final-stage .space-selectors{grid-template-columns:repeat(5,minmax(0,1fr));gap:3px;overflow-x:auto}
+ .final-stage .space-selectors .magnetic-label{font-size:14px}
+ .final-stage .space-selectors button:nth-child(3){grid-column:span 2}
+ .final-stage .space-selectors button:nth-child(5){grid-column:5;grid-row:2}
+ .final-stage .living-photo .photo-link{aspect-ratio:1.65}
+ .final-stage #archive{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 24px}
+ .final-stage #archive .archive-thumb{height:106px}
+ .final-stage #archive>.chapter-head{align-items:start;gap:24px}
+ .final-stage #archive .chapter-intro{max-width:330px}
+}
+@media(max-width:760px){
+ .final-stage .site-header{min-height:68px}
+ .final-stage .context-band{padding-block:12px}
+ .final-stage .chapter{padding-block:22px}
+ .final-stage .chapter .eyebrow{margin-bottom:9px}
+ .final-stage .chapter-head{margin-bottom:13px}
+ .final-stage .b-title>.eyebrow{margin-top:15px;margin-bottom:9px}
+ .final-stage .b-title h1{line-height:1.27;margin-bottom:13px}
+ .final-stage .b-title .text-link{margin-top:8px;margin-bottom:10px}
+ .final-stage .b-object .hero-caption{padding-bottom:15px}
+ .final-stage .building-pair,.final-stage .spatial-pair,.final-stage .living-layout,.detail-layout{gap:13px}
+ .final-stage .building-photo .photo-link{aspect-ratio:1.7}
+ .final-stage .building-photo img{object-position:50% 85%}
+ .final-stage .space-reading .chapter-head{margin:0}
+ .final-stage .space-reading .chapter-intro{margin-top:12px}
+ .final-stage .space-reading .space-selectors{order:2;width:100%;margin:0;padding-top:10px;gap:22px}
+ .final-stage .spatial-media{order:1}
+ .final-stage .space-copy{order:3;border:0;padding:0;margin:0}
+ .final-stage .spatial-photo .photo-link{aspect-ratio:1.7}
+ .final-stage .materials-layout{gap:13px}
+ .final-stage .crop-primary .crop-window{height:250px}
+ .final-stage .crop-more{margin-top:10px}
+ .final-stage .wood-label .meta-fold{margin-top:12px}
+ .final-stage .living-photo .photo-link{aspect-ratio:1.7}
+ .final-stage .time-fields{gap:13px}
+ .final-stage .time-fields article:first-child{min-height:125px}
+ .final-stage #archive>.chapter-head{margin-bottom:14px}
+ .final-stage .archive-record{padding-block:12px}
+ .final-stage #archive .chapter-intro{margin-top:12px}
+ .final-stage .expanded-footer{padding-block:18px 22px}
+ .final-stage .footer-notes{margin-top:10px}
+}
+@media(min-width:761px){.final-stage #archive>.archive-mobile-more::details-content{display:contents}}

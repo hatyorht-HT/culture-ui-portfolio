@@ -1,0 +1,96 @@
+@font-face{font-family:Polished Sans;src:url('../assets/fonts/b-polished/neutral-sans.woff') format('woff');font-weight:100 900;font-display:swap}
+@font-face{font-family:Polished Serif;src:url('../assets/fonts/b-polished/quiet-serif.woff') format('woff');font-weight:100 900;font-display:swap}
+.polished{--sans:'Polished Sans','Microsoft YaHei',sans-serif;--serif:'Polished Serif','Songti SC',serif;--paper:#eae6df;--ink:#3b3630;--muted:#6a6256;--line:#c6bdaf}
+.polished .b-title h1{font-family:var(--serif);font-size:72px;line-height:1.4;letter-spacing:-.035em;font-weight:530}
+.hero-line-1{font-weight:400}.hero-line-2{font-weight:550}
+.polished .b-title{padding-top:106px}.polished .b-title>*{max-width:580px}
+.polished .b-object{left:calc(20% - 28px)}
+.polished .b-object .photo-link::after{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 64% 65%,rgba(248,225,178,.07) 0,transparent 32%,rgba(20,15,10,.08) 78%)}
+.polished .b-object img{filter:brightness(1.025) contrast(1.025)}
+.polished .chapter{padding-block:76px}.polished .chapter-head{margin-bottom:35px;gap:50px;align-items:end}
+.polished .chapter-head h2{font-size:49px;line-height:1.44;letter-spacing:-.025em}
+.polished #building .chapter-head h2,.polished #space .chapter-head h2{font-family:var(--sans);font-weight:450;line-height:1.45}
+.polished #building .chapter-head h2{font-size:48px}.polished #space .chapter-head h2{font-size:47px}
+.polished #materials .chapter-head h2{font-size:46px;font-weight:480}.polished #detail .chapter-head h2{font-size:59px}
+.polished #living .chapter-head h2{font-size:46px;font-weight:450}.polished #time .chapter-head h2{font-family:var(--sans);font-size:36px;font-weight:450}
+.polished #archive .chapter-head h2{font-family:var(--sans);font-size:35px;font-weight:450}
+.polished .eyebrow{font-size:13px;letter-spacing:.04em;margin-bottom:18px}
+.polished .chapter-intro{font-size:18px;line-height:1.9;max-width:440px}
+.polished .chapter .photo-link{border-radius:10px;border:1px solid #3b363012}
+.polished .chapter .photo-link:hover img,.polished .chapter .photo-link:focus-visible img,.polished .b-object .photo-link:hover img,.polished .b-object .photo-link:focus-visible img{transform:none}
+.polished [data-proximity]>img{transform:translate(var(--px,0),var(--py,0)) scale(var(--ps,1))!important;transition:transform .35s cubic-bezier(.2,.6,.3,1)}
+.polished .magnetic-label{display:inline-block;transition:transform .2s ease}
+.polished figcaption{font-size:13px;padding-top:12px;line-height:1.85}
+.polished .photo-action{border-radius:3px}.polished .text-link{font-size:17px}
+.polished .building-pair{grid-template-columns:8fr 4fr;gap:56px}.polished .building-copy h3{font-family:var(--sans);font-size:30px;font-weight:480;line-height:1.5}
+.polished .building-copy>p:not(.eyebrow){font-size:18px;line-height:1.9}.polished .building-copy .fields{font-size:14px}
+
+/* One brief spatial passage. Normal document scroll is never intercepted. */
+.polished .spatial-pair{grid-template-columns:8.7fr 3.3fr;gap:52px;align-items:start;min-height:625px}
+.polished .spatial-media{overflow:hidden}.polished .spatial-photo .photo-link{aspect-ratio:1.6}
+.polished .spatial-photo.is-crop .photo-link>img{transform:translate(var(--px,0),var(--py,0)) scale(1.25)!important;object-position:50% 47%}
+.polished .space-ghost{position:absolute;top:0;left:0;width:100%;z-index:3;pointer-events:none;border-radius:10px;overflow:hidden}
+.polished .ghost-crop>img{transform:scale(1.25)!important;object-position:50% 47%}
+.polished .space-selectors{margin-bottom:28px;border-left:1px solid var(--line);padding-left:20px}
+.polished .space-selectors button{border-bottom:0;min-height:52px;padding:10px 0;gap:19px;position:relative;font-size:20px;font-weight:400;line-height:1.5;color:#71685c}
+.polished .space-selectors button>span:first-child{font-size:12px;font-variant-numeric:tabular-nums;color:inherit;flex:0 0 20px}
+.polished .space-selectors .magnetic-label{font-size:20px;font-weight:inherit;color:inherit}
+.polished .space-selectors button[data-relation=previous]{color:#655b4f}
+.polished .space-selectors button[aria-pressed=true]{font-weight:600;color:var(--ink)}
+.polished .space-selectors button[aria-pressed=true]::before{content:'';position:absolute;left:-21px;top:12px;bottom:12px;width:2px;background:var(--ink)}
+.polished .space-selectors button small{font-size:12px;font-weight:400}
+.polished .space-copy h3{font-family:var(--sans);font-size:27px;font-weight:470;margin-bottom:14px}
+.polished .space-copy>p{font-size:17px;line-height:1.9}.polished .space-copy .note{font-size:13px}
+.polished .space-pending{background:transparent;border:1px solid var(--line);border-radius:0;aspect-ratio:1.6;padding:45px 36px;align-items:start;text-align:left;position:relative}
+.polished .space-pending::before{content:'';position:absolute;inset:24px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);pointer-events:none}
+.polished .space-pending h3{font-size:33px;font-weight:450;line-height:1.6}.polished .space-pending>p:last-child{font-size:16px}
+@media(min-width:1000px) and (prefers-reduced-motion:no-preference){.polish-ready .spatial-track{height:calc(var(--passage-height,625px) + 600px)}.polish-ready .spatial-pair{position:sticky;top:30px}}
+
+.polished .materials-layout{grid-template-columns:1.6fr 7.9fr 2.5fr;gap:34px;align-items:start}
+.polished .wood-label h3{font-size:106px;font-weight:400;line-height:1.1;margin-bottom:28px}
+.polished .wood-label>p:not(.eyebrow){font-size:17px;line-height:1.9}.polished .wood-label .eyebrow{font-size:12px;letter-spacing:0}
+.crop-studies{display:grid;grid-template-columns:1fr 1fr;gap:26px 25px;min-width:0}.crop-primary{grid-column:1/-1}
+.polished .crop-window{height:190px;border-radius:8px}.polished .crop-primary .crop-window{height:405px}
+.crop-inner{position:absolute;inset:0;display:block;overflow:hidden;transform:translate(var(--px,0),var(--py,0)) scale(var(--ps,1));transition:transform .35s ease}
+.polished .crop-inner img{position:absolute;left:50%;top:50%;width:var(--crop-width);height:auto!important;max-width:none;object-fit:initial;transform:translate(calc(-1 * var(--crop-x)),calc(-1 * var(--crop-y)))!important;filter:none}
+.polished .crop-study figcaption{display:block;padding-top:10px;font-size:13px}.crop-study figcaption strong{display:block;font-family:var(--sans);font-size:18px;font-weight:480;margin-bottom:3px;color:var(--ink)}
+.crop-study figcaption span{color:var(--muted)}.crop-source{margin-top:22px;font-size:13px}.crop-source a{border-bottom:1px solid var(--line)}
+.polished .research-index{padding-left:0}.polished .research-index h3{font-family:var(--sans);font-size:24px;font-weight:450}.polished .research-index p:not(.eyebrow){font-size:14px;line-height:1.9}
+.polished .detail-full .photo-link{aspect-ratio:auto;background:transparent;display:block}
+.polished .detail-full img{width:100%;height:auto;object-fit:contain!important;transform:none!important;filter:none}
+.polished .observe-entry{position:static;margin-top:19px;max-width:380px;padding:12px 0;border:0;border-bottom:1px solid var(--ink);background:transparent;font-size:20px;min-height:48px;gap:0;justify-content:stretch}
+.polished .observe-entry .magnetic-label{display:flex;width:100%;justify-content:space-between;gap:35px}
+.polished .detail-information{grid-template-columns:4fr 8fr;padding-top:24px;gap:65px;align-items:start}.polished .detail-information>p{font-size:18px;line-height:1.9}.polished .detail-information .fields>div{font-size:14px}
+.polished .living-layout{grid-template-columns:8.8fr 3.2fr;gap:48px}.polished .living-copy h3{font-size:28px;font-weight:450}.polished .living-copy p{font-size:17px}.polished .living-copy .note{font-size:13px}
+.polished .time-layout{grid-template-columns:2.6fr 9.4fr;gap:52px}.polished .time-fields{grid-template-columns:1.25fr 1fr;gap:28px 48px}.polished .time-fields h3{font-family:var(--sans);font-size:24px;font-weight:450}
+.polished .time-fields article:first-child h3{font-family:var(--serif);font-size:68px;line-height:1.2;font-weight:400;letter-spacing:-.03em}.polished .time-fields article:nth-child(2) h3{font-size:28px;margin-top:15px}.polished .time-fields p:not(.eyebrow){font-size:16px}
+.polished .archive-record{background:transparent!important;padding:10px 0;transition:opacity .2s,border-color .2s}
+.polished .archive-row{font-size:14px;min-height:74px}.polished .archive-row h3{font-size:22px;font-weight:500}.polished .record-type,.polished .record-date{color:var(--muted);font-size:14px}.polished .record-state{font-size:13px}
+.polished .archive-row>a{font-size:14px}.row-arrow{display:inline-block;transition:transform .2s}.polished .archive-record:hover,.polished .archive-record:focus-within{border-color:#978b7a}
+.polished .archive-record:hover .row-arrow,.polished .archive-record:focus-within .row-arrow{transform:translateX(4px)}
+.mobile-record-state{display:none}.polished .expanded-footer{padding-block:40px 45px;align-items:center}.polished .expanded-footer h2{font-size:32px;font-weight:450}.polished .footer-notes{max-width:475px}
+.polished .expanded-viewer{border-radius:10px;font-family:var(--sans)}.polished .viewer-scroll{background:#ded8ce;isolation:isolate;scroll-behavior:auto}
+.polished .viewer-image{transform-origin:0 0;object-fit:contain;filter:none;flex-shrink:0}
+.polished .viewer-modes button,.polished .viewer-controls button,.polished .viewer-controls a,.polished .viewer-close{min-height:44px;min-width:44px;border-radius:3px}
+.polished .viewer-modes{margin-bottom:8px}.polished .viewer-observation{font-size:14px;margin-bottom:10px}.polished .viewer-header h2{font-size:23px;font-weight:500}
+@media(hover:hover) and (pointer:fine){.polished .archive-chapter:has(.archive-record:hover) .archive-record:not(:hover),.polished .archive-chapter:has(.archive-record:focus-within) .archive-record:not(:focus-within){opacity:.88}}
+@media(max-width:1100px){.polished .b-title h1{font-size:55px}.polished .b-title{padding-top:108px}.polished .b-object{left:calc(15% - 24px)}.polished .b-title>*{max-width:445px}.polished .chapter-head h2,.polished #building .chapter-head h2,.polished #space .chapter-head h2{font-size:40px}.polished #detail .chapter-head h2{font-size:49px}.polished .chapter{padding-block:64px}.polished .spatial-pair{gap:32px;min-height:565px}.polished .materials-layout{grid-template-columns:1.5fr 7.3fr 3.2fr;gap:25px}.polished .crop-primary .crop-window{height:320px}.polished .crop-window{height:155px}.polished .building-pair,.polished .living-layout{gap:35px}.polished .building-copy h3{font-size:27px}.polished .time-layout{gap:32px}}
+@media(min-width:761px) and (max-width:999px){.polished .b-title h1{font-size:44px}.polished .b-title>*{max-width:360px}.polished .spatial-pair{grid-template-columns:7.5fr 4.5fr;min-height:0;gap:25px}.polished .chapter-head{gap:30px}.polished .chapter-intro{max-width:300px;font-size:16px}.polished .materials-layout{grid-template-columns:2fr 7fr;gap:25px}.polished .research-index{grid-column:2}.polished .crop-primary .crop-window{height:320px}.polished .living-layout{grid-template-columns:1fr}.polished .living-copy{display:block;max-width:650px}.polished .time-layout{grid-template-columns:1fr}.polished .time-reference{max-width:300px}.polished .time-fields{gap:25px 40px}.polished .archive-row,.polished .archive-labels{grid-template-columns:3fr 1.6fr 2.3fr 1.5fr 1.5fr;gap:14px}}
+@media(max-width:760px){
+ .polished .b-title{padding:0}.polished .b-title h1{font-size:clamp(33px,10vw,46px);line-height:1.45;letter-spacing:-.035em;margin-bottom:24px}.polished .b-title>*{max-width:none}.polished .b-object{position:static}.polished .b-object img{filter:brightness(1.02) contrast(1.02)}
+ .polished .b-title .intro{font-size:17px}.polished .b-object figcaption{padding-bottom:5px}.polished .b-title .text-link{margin-bottom:24px}.polished .b-context-small{padding-block:22px}.polished .b-context-small figure{grid-template-columns:122px 1fr;gap:17px}.polished .b-context-small figcaption{font-size:12px}
+ .polished .chapter{padding-block:43px}.polished .chapter-head{margin-bottom:25px}.polished .chapter-head h2,.polished #building .chapter-head h2,.polished #space .chapter-head h2,.polished #materials .chapter-head h2{font-size:clamp(31px,8.7vw,38px);line-height:1.5}.polished #building .chapter-head h2{font-size:clamp(25px,7.7vw,34px)}
+ .polished #detail .chapter-head h2{font-size:40px}.polished #living .chapter-head h2{font-size:36px}.polished #time .chapter-head h2{font-size:31px}.polished #archive .chapter-head h2{font-size:29px}.polished .chapter-intro{font-size:16px;line-height:1.85;margin-top:16px}.polished .eyebrow{font-size:12px;margin-bottom:15px}
+ .polished .building-pair,.polished .spatial-pair,.polished .materials-layout,.polished .living-layout,.polished .time-layout,.polished .detail-information{grid-template-columns:1fr;gap:25px;min-height:0}.polished .building-copy h3{font-size:27px}.polished .building-copy>p:not(.eyebrow){font-size:17px}.polished .building-copy .fields>div{font-size:13px}
+ .polished .spatial-pair{display:flex;flex-direction:column;gap:20px}.polished .space-reading{display:contents}.polished .space-selectors{order:0;display:flex;flex-direction:row;overflow-x:auto;width:100%;gap:25px;border:0;border-bottom:1px solid var(--line);padding:0 0 8px;margin:0;scrollbar-width:thin;scrollbar-color:#aea391 transparent}
+ .polished .space-selectors button{flex:0 0 auto;font-size:17px;min-height:44px;gap:8px;white-space:nowrap}.polished .space-selectors .magnetic-label{font-size:17px}.polished .space-selectors button>span:first-child{flex:0 0 auto;font-size:12px}.polished .space-selectors button[aria-pressed=true]::before{left:0;top:auto;bottom:-8px;width:100%;height:2px}.polished .space-selectors button small{margin-left:0}
+ .polished .spatial-media{order:1;width:100%}.polished .space-copy{order:2}.polished .space-copy h3{font-size:25px}.polished .space-copy>p{font-size:17px}.polished .space-copy .note{font-size:12px}.polished .spatial-photo .photo-link{aspect-ratio:1.4}.polished .space-pending{min-height:280px;padding:32px 23px;aspect-ratio:auto}.polished .space-pending h3{font-size:27px}.polished .space-pending>p:last-child{font-size:15px}
+ .polished .wood-label{display:grid;grid-template-columns:75px 1fr;column-gap:20px;align-items:center}.polished .wood-label h3{font-size:70px;grid-row:1/3;margin:0}.polished .wood-label .eyebrow{margin-bottom:5px}.polished .wood-label>p:not(.eyebrow){font-size:16px}.crop-studies{grid-template-columns:1fr;gap:22px}.crop-primary{grid-column:auto}.polished .crop-primary .crop-window{height:270px}.polished .crop-window{height:220px}.crop-study figcaption strong{font-size:19px}.polished .crop-study figcaption{font-size:13px}.crop-source{margin-top:19px}
+ .polished .research-index{grid-column:auto;display:block;margin-top:8px}.polished .research-index>div{display:grid;grid-template-columns:72px 1fr;gap:15px;padding-block:14px;align-items:start}.polished .research-index h3{font-size:23px;margin:0}.polished .research-index p:not(.eyebrow){font-size:14px}
+ .polished .observe-entry{font-size:18px;max-width:100%;margin-top:15px}.polished .detail-information{padding-top:20px}.polished .detail-information>p{font-size:17px}.polished .detail-information .fields>div{font-size:13px}.polished .living-copy h3{font-size:27px}.polished .living-copy>p{font-size:17px}.polished .living-copy .note{font-size:13px}
+ .polished .time-reference{max-width:240px}.polished .time-fields{grid-template-columns:1fr;gap:24px}.polished .time-fields article:first-child h3{font-size:65px}.polished .time-fields h3{font-size:23px}.polished .time-fields article:nth-child(2) h3{margin-top:0;font-size:28px}.polished .time-fields p:not(.eyebrow){font-size:16px}
+ .polished .archive-row h3{font-size:22px}.polished .archive-row{grid-template-columns:1fr auto;gap:6px 15px;min-height:0}.polished .record-state{display:none}.mobile-record-state{display:block;font-size:13px;margin-bottom:10px;color:var(--muted)}.polished .record-type,.polished .record-date{font-size:13px}.polished .archive-row>a{grid-row:2/4;align-self:center;min-height:44px;font-size:14px}.polished .archive-record details summary{min-height:44px;padding-top:12px}.polished .archive-record{padding-block:14px}.polished .record-extra{font-size:14px}
+ .polished .expanded-footer{padding-block:32px}.polished .expanded-footer h2{font-size:30px}.polished .footer-notes{margin-top:22px}
+ .polished .expanded-viewer{padding:14px;max-height:calc(100dvh - 20px)}.polished .viewer-header h2{font-size:18px}.polished .viewer-modes{gap:8px;margin-bottom:6px}.polished .viewer-mode-note{font-size:12px;line-height:1.6}.polished .viewer-controls{gap:5px}.polished .viewer-observation{font-size:13px;max-height:56px;margin-bottom:7px}.polished .viewer-controls button,.polished .viewer-controls a{padding-inline:10px;font-size:13px}.polished .viewer-header{align-items:start}.polished .viewer-close{white-space:nowrap}
+}
+@media(prefers-reduced-motion:reduce){.polished [data-proximity]>img,.polished .crop-inner{transform:none!important}.polished .spatial-photo.is-crop .photo-link>img{transform:scale(1.25)!important}.polished .magnetic-label,.polished .row-arrow{transform:none!important}.polished .viewer-image{transition:none!important}}

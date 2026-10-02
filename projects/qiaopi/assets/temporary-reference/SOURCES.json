@@ -1,0 +1,40 @@
+{
+  "retrieved": "2026-10-02",
+  "usage": "临时视觉测试，正式使用前确认授权",
+  "records": {
+    "173": {
+      "file": "gd-qiaopi-0173.jpg",
+      "title": "余木金寄给母亲的侨批",
+      "id": "G2013-侨批-0173",
+      "from": "新加坡",
+      "to": "广东潮安",
+      "sender": "余木金",
+      "date": "待补真实资料",
+      "source": "https://www.da.gd.gov.cn/portal_home/wap/archivesDetail/5266",
+      "image": "https://www.da.gd.gov.cn/portal_home/file/getById?fileId=13002",
+      "raw": "archive-5266-1.jpg",
+      "size": [
+        1692,
+        958
+      ],
+      "sha256": "838ee5cdfbf996cb051b8ce271e2433c8c6dd20a3a3ec92adc9b52c2170e2c9c"
+    },
+    "175": {
+      "file": "gd-qiaopi-0175.jpg",
+      "title": "李绍铭寄给母亲的侨批",
+      "id": "G2013-侨批-0175",
+      "from": "印度尼西亚",
+      "to": "广东澄海",
+      "sender": "李绍铭",
+      "date": "1954年3月9日",
+      "source": "https://www.da.gd.gov.cn/portal_home/wap/archivesDetail/5268",
+      "image": "https://www.da.gd.gov.cn/portal_home/file/getById?fileId=13004",
+      "raw": "archive-5268-1.jpg",
+      "size": [
+        1073,
+        999
+      ],
+      "sha256": "c5c32de81a3f39be5d21ab2f675e449b073c8b8d72ae15bbdabe0676f4535fed"
+    }
+  }
+}

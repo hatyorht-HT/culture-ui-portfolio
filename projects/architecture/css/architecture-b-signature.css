@@ -1,0 +1,106 @@
+@font-face{font-family:Final Sans;src:url('../assets/fonts/b-signature/neutral-sans.woff') format('woff');font-weight:100 900;font-display:swap}
+@font-face{font-family:Final Serif;src:url('../assets/fonts/b-signature/quiet-serif.woff') format('woff');font-weight:100 900;font-display:swap}
+/* One spatial climax; the other chapters remain in the compact editorial rhythm. */
+.signature-stage .threshold-window{position:relative;--opening-inset:0%;--threshold-scale:1}
+.signature-ready .threshold-window::before{content:'';position:absolute;inset:0 0 auto;height:var(--picture-height,420px);background:#ddd6ca;border:1px solid #b3a68f;pointer-events:none;border-radius:4px}
+.signature-stage .threshold-drawing{position:absolute;inset:0 0 auto;width:100%;height:420px;z-index:4;pointer-events:none;opacity:.68}
+.signature-stage .threshold-drawing path{fill:none;stroke:#987f58;stroke-width:1}
+.signature-ready .spatial-photo .photo-link{clip-path:inset(0 var(--opening-inset) 0 var(--opening-inset));border-radius:2px}
+.signature-ready .spatial-photo:not(.is-crop) .photo-link>img{transform:scale(var(--threshold-scale))!important}
+.signature-stage .space-ghost{clip-path:inset(0 var(--opening-inset,0%) 0 var(--opening-inset,0%));border-radius:2px}
+.signature-stage .threshold-controls{display:flex;align-items:center;justify-content:space-between;gap:15px;border-top:1px solid var(--line);padding-top:7px;margin-top:14px}
+.signature-stage .threshold-status{font-size:13px;color:var(--accent)}
+.signature-stage .threshold-resume{font-family:var(--sans);font-size:12px;background:none;border:0;border-bottom:1px solid var(--line);min-height:44px;padding:8px 0;color:var(--muted);cursor:pointer;white-space:nowrap}
+.signature-stage .space-selectors{margin-top:3px;border-top:0;padding-top:0}
+.signature-stage #space .chapter-head h2{line-height:1.3}
+.signature-stage .space-copy{margin-top:9px;padding-top:11px}
+.signature-stage .space-copy>p.space-position{display:none}
+@media(min-width:1000px) and (prefers-reduced-motion:no-preference){
+ .signature-ready .spatial-pair{min-height:var(--threshold-height,720px)}
+ .signature-ready .space-reading,.signature-ready .spatial-media{position:sticky;top:24px;align-self:start}
+}
+/* Thin observation leaders, no boxes, dots, grids, tooltip, glow or measurements. */
+.signature-stage .observation-layer{position:absolute;inset:0;z-index:4;pointer-events:none}
+.signature-stage .observation-lines{position:absolute;inset:0;width:100%;height:100%;overflow:hidden}
+.signature-stage .observation-lines path{fill:none;stroke:currentColor;stroke-width:1;opacity:.62}
+.signature-stage .observation-label{position:absolute;font-family:var(--sans);font-size:12px;line-height:1.4;white-space:nowrap;opacity:.72;color:inherit;letter-spacing:.02em;transition:opacity .18s}
+.signature-stage .observation-label small{font-family:var(--sans);font-size:10px;margin-right:5px}
+.signature-stage .observation-label.is-near{opacity:.86}
+.signature-stage .hero-observation{color:#eadac0}
+.signature-stage .detail-observation{color:#f1e4cd}
+.signature-stage .detail-observation .observation-label{text-shadow:0 1px 2px #20160e}
+.signature-stage .observation-boundary{font-size:11px;color:var(--muted);margin-top:4px}
+.signature-stage .hero-focus{position:absolute;inset:0;pointer-events:none;z-index:1;opacity:.6;mask-image:radial-gradient(ellipse 31% 38% at var(--focus-x,49%) var(--focus-y,65%),#000 0%,#000d 35%,transparent 80%)}
+.signature-stage .b-object .hero-focus img{display:block;width:100%;height:100%;object-fit:cover;object-position:59% 58%;filter:brightness(1.13) contrast(1.075) saturate(1.035);transform:none!important}
+.signature-stage .b-object .photo-link>img{filter:brightness(.965) contrast(1.07) saturate(.9)}
+.signature-stage .b-object .photo-link::after{z-index:2;background:linear-gradient(0deg,#15110cdc,transparent 25%),radial-gradient(ellipse at 49% 64%,transparent 25%,#22180d15 90%)}
+/* 62 / 24 / 14 material slices: one image, three explicitly different evidence windows. */
+.signature-stage .material-slice{--slice-height:338px;display:grid;grid-template-columns:62fr 24fr 14fr;gap:7px;align-items:start}
+.signature-stage .material-slice .crop-window{height:var(--slice-height);border-radius:2px}
+.signature-stage .material-slice img{min-width:calc(var(--slice-height) * 1.5022)}
+.signature-stage .material-slice .crop-study figcaption{padding-top:9px}
+.signature-stage .material-slice figcaption strong{font-size:14px;letter-spacing:0;font-weight:470}
+.signature-stage .material-slice figcaption span{display:none}
+.signature-stage .wood-label .material-marker{display:block;font-family:var(--serif);font-size:74px;font-weight:430;letter-spacing:0;line-height:1.04;color:#655037;margin:0 0 18px}
+.signature-stage .material-reading .research-index{margin-top:20px}
+.signature-stage #building .photo-link img,.signature-stage #living .photo-link img,.signature-stage #time .photo-link img{transform:none!important}
+/* An empty historical interval is not a chronology of invented events. */
+.signature-stage .time-fields{grid-template-columns:1fr 1fr;gap:18px 24px}
+.signature-stage .time-distance{grid-column:1/-1;display:grid;grid-template-columns:150px minmax(32px,1fr) minmax(180px,240px);gap:22px;align-items:center}
+.signature-stage .time-distance article{border:0;padding:0}
+.signature-stage .time-distance article:first-child h3{font-size:62px;font-weight:400;margin-bottom:6px}
+.signature-stage .time-distance article:last-child h3{font-size:26px;font-family:var(--serif);font-weight:450;line-height:1.25;white-space:nowrap;margin-bottom:11px}
+.signature-stage .time-distance .eyebrow{margin-bottom:8px}
+.signature-stage .time-gap{height:1px;background:#b6a78f;align-self:center;margin-top:-4px}
+.signature-stage .time-fields>article h3{font-size:20px;white-space:normal;margin-top:0}
+.signature-stage .human-reference{position:absolute;right:17px;bottom:30px;height:25%;width:8px;z-index:3;pointer-events:none;border-right:1px solid #efe3cba8}
+.signature-stage .human-reference::before,.signature-stage .human-reference::after{content:'';position:absolute;right:0;width:8px;border-top:1px solid #efe3cba8}
+.signature-stage .human-reference::before{top:0}.signature-stage .human-reference::after{bottom:0}
+.signature-stage .human-caption{font-size:11px;color:var(--muted);flex-basis:100%}
+@media(min-width:761px) and (max-width:1100px){.signature-stage .material-slice{--slice-height:310px}.signature-stage .time-distance{grid-template-columns:125px minmax(25px,1fr) minmax(160px,210px);gap:15px}.signature-stage .time-distance article:first-child h3{font-size:56px}.signature-stage .time-distance article:last-child h3{font-size:23px}}
+@media(min-width:761px) and (max-width:999px){.signature-stage .time-distance{grid-template-columns:140px 1fr}.signature-stage .time-gap{grid-column:2;grid-row:1}.signature-stage .time-distance article:last-child{grid-column:1/-1;grid-row:2}.signature-stage .wood-label .material-marker{font-size:60px}}
+@media(max-width:760px){
+ .signature-stage .spatial-pair{min-height:0}
+ .signature-stage .space-reading .threshold-controls{order:2;width:100%;margin:0;padding:0;border-top:1px solid var(--line)}
+ .signature-stage .space-reading .space-selectors{order:3;padding-top:0}
+ .signature-stage .space-copy{order:4;margin:0;padding:0;border:0}
+ .signature-stage .spatial-media{order:1}
+ .signature-stage .b-object .hero-focus img{object-position:51% 61%}
+ .signature-stage .observation-label{font-size:10px}.signature-stage .observation-label small{font-size:9px;margin-right:3px}
+ .signature-stage .observation-lines path{opacity:.56;stroke-width:.9}
+ .signature-stage .material-slice{grid-template-columns:1fr 1fr;gap:13px;--slice-height:145px}
+ .signature-stage .material-slice .crop-primary{grid-column:1/-1}
+ .signature-stage .material-slice .crop-primary .crop-window{height:260px}
+ .signature-stage .material-slice .crop-primary img{min-width:391px}
+ .signature-stage .material-slice figcaption strong{font-size:15px}
+ .signature-stage .wood-label .material-marker{font-size:44px;margin-bottom:9px}
+ .signature-stage .wood-label>.eyebrow{display:block}
+ .signature-stage .time-layout{gap:17px}
+ .signature-stage .time-reference{position:static;width:115px;max-width:38%;justify-self:end}
+ .signature-stage .time-fields{grid-template-columns:1fr;gap:16px}
+ .signature-stage .time-distance{grid-template-columns:126px minmax(15px,1fr) minmax(130px,1fr);gap:12px;align-items:start}
+ .signature-stage .time-distance article:first-child{padding:0;min-height:0}
+ .signature-stage .time-distance article:first-child h3{font-size:54px}
+ .signature-stage .time-distance article:last-child h3{font-size:22px;white-space:normal}
+ .signature-stage .time-distance article p:not(.eyebrow){font-size:13px;line-height:1.65}
+ .signature-stage .time-gap{margin-top:39px;align-self:start}
+ .signature-stage .time-fields>article h3{font-size:21px}
+ .signature-stage .time-reference{grid-row:2}.signature-stage .human-reference{right:13px;bottom:15px}
+ .signature-stage .observation-boundary{font-size:11px}
+}
+@media(max-width:340px){.signature-stage .time-distance{grid-template-columns:115px minmax(12px,1fr) minmax(110px,1fr);gap:10px}.signature-stage .time-distance article:last-child h3{font-size:20px}.signature-stage .material-slice{gap:10px}}
+@media(prefers-reduced-motion:reduce){.signature-stage .spatial-pair{min-height:0!important}.signature-stage .space-reading,.signature-stage .spatial-media{position:static!important}.signature-stage .observation-label{transition:none}.signature-stage .spatial-photo .photo-link{clip-path:none!important}.signature-stage .spatial-photo:not(.is-crop) .photo-link>img{transform:none!important}}
+@media(min-width:761px){.signature-stage .material-slice .crop-primary{grid-column:auto}}
+.signature-stage .material-slice img{min-width:calc(var(--slice-height) * 2.25)}
+.signature-stage .time-distance a{white-space:nowrap}
+.signature-stage .living-copy .chapter-head .eyebrow{font-size:12px}
+
+.signature-stage .observation-lines path.is-near{opacity:.76}
+
+@media(max-width:760px) and (prefers-reduced-motion:no-preference){
+ .signature-ready .spatial-media{position:sticky;top:16px;z-index:5;background:var(--paper,#eae6df)}
+}
+
+.signature-stage .threshold-covered{visibility:hidden}
+@media(max-width:760px){.signature-stage .material-slice .crop-edge img{--crop-width:450%!important}}
+.signature-stage .space-ghost{position:absolute!important;top:0;left:0;right:auto;bottom:auto}
